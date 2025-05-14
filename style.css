@@ -34,6 +34,10 @@ body {
   margin-top: 10px;
 }
 
+.paper.image img[src="https://i.postimg.cc/YCsMTTH8/PHOTO-2025-03-03-17-17-09.jpg"] {
+  max-height: 250px;
+}
+
 .paper.heart {
   width: 200px;
   height: 200px;
@@ -90,12 +94,13 @@ p {
   }
 
   .paper.image img {
-    max-height: 100%;
-    width: 100%;
-    height: auto;
-    object-fit: contain;
+    max-height: 200px;
   }
 
+  .paper.image img[src="https://i.postimg.cc/YCsMTTH8/PHOTO-2025-03-03-17-17-09.jpg"] {
+    max-height: 180px;
+  }
+  
   .paper.heart {
     width: 150px;
     height: 150px;
