@@ -90,7 +90,10 @@ p {
   }
 
   .paper.image img {
-    max-height: 200px;
+    max-height: 100%;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
   }
 
   .paper.heart {
