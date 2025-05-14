@@ -1,46 +1,49 @@
-@import url('https://fonts.googleapis.com/css2?family=Zeyada&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Zeyada&display=swap');
 body {
-  margin: 0;
-  padding: 0;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  background-size: cover;
+  background-size: 1000px;
   background-image: url("https://www.psdgraphics.com/wp-content/uploads/2022/01/white-math-paper-texture.jpg");
-  background-position: center;
-  font-size: 16px;
+  background-position: center center;
 }
-
 .paper {
-  width: 90%;
-  max-width: 400px;
-  padding: 10px 20px;
   background-image: url("https://i0.wp.com/textures.world/wp-content/uploads/2018/10/2-Millimeter-Paper-Background-copy.jpg?ssl=1");
-  background-size: cover;
-  background-position: center;
+  background-size: 500px;
+  background-position: center center;
+  padding: 20px 100px;
+  transform: rotateZ(-5deg);
   box-shadow: 1px 15px 20px 0px rgba(0,0,0,0.5);
   position: absolute;
-  transform: rotateZ(-5deg);
 }
-
-.paper.image img {
-  width: 100%;
-  height: auto;
-  max-height: 300px;
-  object-fit: contain;
-  display: block;
-  margin-top: 10px;
-}
-
+.paper.image img[src="https://i.postimg.cc/YCsMTTH8/PHOTO-2025-03-03-17-17-09.jpg"] {
+      max-height: 250px;
+    }
 .paper.heart {
+  position: relative;
   width: 200px;
   height: 200px;
   padding: 0;
   border-radius: 50%;
 }
-
+.paper.image {
+  padding: 10px;
+}
+.paper.image p {
+  font-size: 30px;
+}
+img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  max-height: 250px;
+  display: block;
+  margin: 0 auto;
+  object-fit: cover;
+  user-select: none;
+}
 .paper.heart::after {
   content: "";
   background-image: url('https://cdn.pixabay.com/photo/2016/03/31/19/25/cartoon-1294994__340.png');
@@ -50,55 +53,43 @@ body {
   top: 0;
   left: 0;
   background-size: 150px;
-  background-position: center;
+  background-position: center center;
   background-repeat: no-repeat;
   opacity: 0.6;
 }
-
-p {
-  font-family: 'Zeyada', cursive;
-  font-size: 1.5em;
-  color: rgb(0,0,100);
-  opacity: 0.75;
-  user-select: none;
-  text-align: center;
-  margin: 0.5em 0;
+.paper.red {
+/*   filter: hue-rotate(90deg); */
 }
-
 .paper:nth-of-type(3n) {
   background-position: left top;
 }
-
-.paper.red {
-  /* filter: hue-rotate(90deg); */
+.paper:nth-of-type(3n) {
+/*   filter: hue-rotate(200deg); */
 }
-
-/* Responsividade para dispositivos móveis */
+p {
+  font-family: 'Zeyada';
+  font-size: 50px;
+  color: rgb(0,0,100);
+  opacity: 0.75;
+  user-select: none;
+  
+}
 @media (max-width: 600px) {
-  body {
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 20px 10px;
-  }
-
   .paper {
-    max-width: 100%;
-    padding: 15px;
-    box-shadow: 1px 10px 15px rgba(0,0,0,0.3);
-    /* NÃO colocar transform aqui para não afetar o JavaScript */
+    padding: 10px 20px;
+    background-size: cover;
+    /* remove rotação padrão para facilitar visualização em telas pequenas */
   }
 
-  .paper.image img {
-    max-height: 200px;
-  }
-
-  .paper.heart {
-    width: 150px;
-    height: 150px;
+.paper.image img[src="https://i.postimg.cc/YCsMTTH8/PHOTO-2025-03-03-17-17-09.jpg"] {
+        max-height: 180px;
+      }
+      
+  .paper.image p {
+    font-size: 20px;
   }
 
   p {
-    font-size: 1.2em;
+    font-size: 30px;
   }
 }
