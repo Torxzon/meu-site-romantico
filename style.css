@@ -70,18 +70,3 @@ p {
   user-select: none;
   
 }
-@media (max-width: 600px) {
-  .paper {
-    padding: 10px 20px;
-    background-size: cover;
-    /* transform: rotateZ(0deg) !important; /* remove rotação padrão para facilitar visualização em telas pequenas */
-  }
-
-  .paper.image p {
-    font-size: 20px;
-  }
-
-  p {
-    font-size: 30px;
-  }
-}
